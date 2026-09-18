@@ -99,7 +99,7 @@ class Intro {
         }
 
         //CREATION OF ARRAYS
-        int numbs[] = {3,7,2,4};
+        int[] numbs = {3,7,2,4};
         //change the value
         numbs[1] = 5;
 
@@ -123,11 +123,11 @@ class Intro {
         }
 
         //MULTI DIMENSIONAL ARRAY.
-        int digit[][] = new int[5][3];
+        int[][] digit = new int[5][3];
 
         System.out.println(Arrays.deepToString(digit));
 
-        int digits [][] = new int[5][3];
+        int[][] digits = new int[5][3];
 
         for (int k=0;k<5;k++)
         {
@@ -159,7 +159,7 @@ class Intro {
         }
 
         //ENHANCED FOR LOOP replaced [m][n] with [p][q].
-        for(int p[] : figures)
+        for(int[] p : figures)
         {
             for(int q: p)
             {
@@ -169,7 +169,7 @@ class Intro {
         }
 
         //JAGGED ARRAY [Row][Collum].
-        int columns[][] = new int[3][];
+        int[][] columns = new int[3][];
 
         columns[0] = new int[3];
         columns[1] = new int[5];
