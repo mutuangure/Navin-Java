@@ -1,3 +1,5 @@
+import java.lang.String;
+
 /*
 class Calculator
 {
@@ -87,6 +89,5 @@ public class Object{
         for (Students student : students) {
             System.out.println(student.name + " : " + student.marks);
         }
-
     }
 }
