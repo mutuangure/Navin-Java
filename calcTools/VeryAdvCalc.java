@@ -1,3 +1,5 @@
+package calcTools;
+
 public class VeryAdvCalc extends AdvCalc
 {
     public double power(int r1, int r2)

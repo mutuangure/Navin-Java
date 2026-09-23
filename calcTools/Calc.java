@@ -1,3 +1,5 @@
+package calcTools;
+
 //Inheritance(Class for calc)
 public class Calc
 {

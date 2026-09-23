@@ -1,3 +1,9 @@
+//import calcTools.Calc;
+//import calcTools.AdvCalc;
+//import calcTools.VeryAdvCalc;
+import calcTools.*;  //Helps import all file in the folder
+//import other.calcTools.*; //Helps import all folders plus the file in the folder.
+
 public class Inheritance{
     static void main(String[] args)
     {
