@@ -16,6 +16,7 @@ public class Encapsulation
 
 class People_get
 {
+//private works only in the same class thus has to be returned by a public class
     private String name = "Navin";
     private int age = 24;
 
