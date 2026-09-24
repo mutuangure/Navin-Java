@@ -59,7 +59,7 @@ public class Super5
         B obj = new B(5);
     }
 }
-*/
+
 import folder.FileA;
 import folder.FileC;
 import folder.A1;
@@ -78,5 +78,110 @@ public class Super5
         mark.show1();
 
         System.out.println(fileB);
+
+        Computer device = new Computer();
+        device.fact();
+
+        device = new Laptop();
+        //(OR) Computer device = new Laptop();
+        //(ERROR) Laptop device = new Computer(); //Computer cannot be converted to Laptop
+        device.fact();
+    }
+}
+
+//POLYMORPHISM  &  FINAL KEYWORD in java.
+class Computer  //{final class Computer;} (final) prevents your class from being extended.
+{
+    public void fact()
+    {
+        System.out.println("A laptop can act as a computer");
+    }
+}
+class Laptop extends Computer
+{
+    public void fact() {
+        System.out.println("A computer cannot act as a laptop");
+    }
+}
+
+public class Super5
+{
+    static void main() {
+        Computer device = new Computer();
+        device.fact();
+
+        device = new Laptop();
+        //(OR) Computer device = new Laptop();
+        //(ERROR) Laptop device = new Computer(); //Computer cannot be converted to Laptop
+        device.fact();
+    }
+}
+
+//OBJECT CLASS equals & toString.
+class Laptop
+{
+    String model;
+    int price;
+
+    public String toString()
+    {
+        return model + " : " + price;
+    }
+    public boolean equals(Laptop that)
+    {
+        if (this.model.equals(that.model) && this.price == that.price)
+            return true;
+        else
+            return false;
+        //(SIMPLIFY)return this.model.equals(that.model) && this.price == that.price;
+    }
+}
+
+public class Super5
+{
+    static void main(String[] args) {
+        Laptop obj = new Laptop();
+        obj.model = "Lenovo Yoga";
+        obj.price = 35000;
+
+        Laptop obj1 = new Laptop();
+        obj1.model = "Lenovo Yoga";
+        obj1.price = 35000;
+
+        System.out.println(obj);
+
+        boolean result = obj.equals(obj1);
+
+        System.out.println(result);
+    }
+}
+*/
+
+//DOWN_CASTING AND UPCASTING.
+//Typecasting is converting a value from one variable to another double to int
+class A
+{
+    public void castingA()
+    {
+        System.out.println("Casting in A");
+    }
+}
+class B extends A
+{
+    public void castingB()
+    {
+        System.out.println("Casting in B");
+    }
+}
+
+public class Super5
+{
+    static void main(String[] args) {
+        A cast = (A) new B(); //Upcasting for typecasting
+        cast.castingA();
+
+        B cast1 = (B) cast; //Downcasting for typecasting
+        cast1.castingB();
+
     }
 }
