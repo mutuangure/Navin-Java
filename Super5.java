@@ -159,28 +159,28 @@ public class Super5
 
 //DOWN_CASTING AND UPCASTING.
 //Typecasting is converting a value from one variable to another double to int
-class A
+class X
 {
     public void castingA()
     {
-        System.out.println("Casting in A");
+        System.out.println("Casting in X");
     }
 }
-class B extends A
+class Z extends X
 {
     public void castingB()
     {
-        System.out.println("Casting in B");
+        System.out.println("Casting in Z");
     }
 }
 
 public class Super5
 {
     static void main(String[] args) {
-        A cast = (A) new B(); //Upcasting for typecasting
+        X cast = (X) new Z(); //Upcasting for typecasting
         cast.castingA();
 
-        B cast1 = (B) cast; //Downcasting for typecasting
+        Z cast1 = (Z) cast; //Downcasting for typecasting
         cast1.castingB();
 
     }
