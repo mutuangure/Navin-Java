@@ -193,6 +193,96 @@ public class Lesson6
         navin.devOps(lap);
     }
 }
-*/
+
+
 
 //ENUMS (Enumerations) IN JAVA.  ->These are named constant
+enum Status
+{
+    Debugging, Running, Pending, Successful;
+}
+
+public class Lesson6
+{
+    static void main(String[] args)
+    {
+        System.out.println(Status.Successful);//You can return the status directly
+        //OR
+        Status Y = Status.Running;
+        System.out.println(Y);
+
+        Status[] ss = Status.values();
+        System.out.println(ss[1]);
+
+        //Print all enum
+        for(Status y : ss)
+        {
+            System.out.println(y + " : " + y.ordinal());
+        }
+
+        //IF else & Switch
+        if (Y == Status.Debugging)
+            System.out.println("Start running the code");
+        else if (Y == Status.Running)
+            System.out.println("Analyzing the code");
+        else if (Y == Status.Pending)
+            System.out.println("Please wait");
+        else
+            System.out.println("All good");
+        //Switch.
+        switch (Y)
+        {
+            case Debugging:
+                System.out.println("Start running the code");
+                break;
+            case Running:
+                System.out.println("Analyzing the code");
+                break;
+            case Pending:
+                System.out.println("Please wait");
+                break;
+            default:  //(OR) case Successful:
+                System.out.println("All good");
+                break;
+        }
+    }
+}
+*/
+
+enum Phones
+{
+    Iphone(1500), Samsung(1600), Xiaomi(1100), Oppo;
+
+    private int price;
+
+    private Phones()
+    {
+        price = 750;
+    }
+
+    private Phones(int price) {
+        this.price = price;
+        System.out.println("In the phone " + this.name());
+    }
+    public int getPrice() {
+        return price;
+    }
+    public void setPrice(int price) {
+        this.price = price;
+    }
+}
+
+public class Lesson6
+{
+    static void main()
+    {
+        //Phones sim = Phones.Samsung;
+        //System.out.println(sim + " : " + sim.getPrice());
+
+        //Get all phones
+        for(Phones sim : Phones.values())
+        {
+            System.out.println(sim + " : " + sim.getPrice());
+        }
+    }
+}
