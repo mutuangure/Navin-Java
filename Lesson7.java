@@ -42,7 +42,7 @@ public class Lesson7
         fun.inter();
     }
 }
-*/
+
 //Lambda expression with a methods that returns a value
 @FunctionalInterface
 interface Nums
@@ -79,3 +79,89 @@ public class Lesson7
 
 
 
+//EXCEPTIONS IN JAVA (Exceptions are run time errors)
+
+//Exception handling.
+public class Lesson7
+{
+    static void main(String[] args)
+    {
+        int m = 9;
+        int n = 0;
+
+        try
+        {
+            n = 18/m;
+        }
+        catch(Exception e) //catch block only executed in case of an exception
+        {
+            System.out.println("Something went wrong" + e);
+        }
+
+        System.out.println(n);
+        System.out.println("Program executed");
+    }
+}
+//Multiple catch in java (Exception).
+public class Lesson7
+{
+    static void main(String[] args)
+    {
+        int m = 2;
+        int n = 0;
+
+        int[] nums = new int[5];
+        String str = null;
+
+        try
+        {
+            n = 18/m;
+
+            //System.out.println(str.length());
+            System.out.println(nums[1]);
+            System.out.println(nums[5]);
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Cannot divide by the int n " + e);
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Out of bounds in array");
+        }
+        catch (Exception e) //Exception is a parent class thus it should be last
+        //Exception can handle everything
+        {
+            System.out.println("Something went wrong" + e);
+        }
+
+        System.out.println(n);
+        System.out.println("Program executed");
+    }
+}
+*/
+//Throw keyword in Java (Exception).
+public class Lesson7
+{
+    static void main(String[] args)
+    {
+        int m = 5;
+        int n = 0;
+
+        try
+        {
+            n = 18/m;
+        }
+        catch(ArithmeticException e)
+        {
+            System.out.println("Cannot divide by the int n " + e);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Something went wrong" + e);
+        }
+
+        System.out.println(n);
+        System.out.println("Program executed");
+    }
+}
