@@ -79,6 +79,7 @@ public class Lesson7
 
 
 
+
 //EXCEPTIONS IN JAVA (Exceptions are run time errors)
 
 //Exception handling.
@@ -86,7 +87,7 @@ public class Lesson7
 {
     static void main(String[] args)
     {
-        int m = 9;
+        int m = 0;
         int n = 0;
 
         try
@@ -102,6 +103,7 @@ public class Lesson7
         System.out.println("Program executed");
     }
 }
+
 //Multiple catch in java (Exception).
 public class Lesson7
 {
@@ -139,26 +141,66 @@ public class Lesson7
         System.out.println("Program executed");
     }
 }
-*/
 //Throw keyword in Java (Exception).
 public class Lesson7
 {
     static void main(String[] args)
     {
-        int m = 5;
+        int m = 20;
         int n = 0;
 
         try
         {
             n = 18/m;
+            if (n==0)
+                throw new ArithmeticException("i don't want to print zero");
         }
-        catch(ArithmeticException e)
+        catch(ArithmeticException e) //Handle the error
         {
-            System.out.println("Cannot divide by the int n " + e);
+            n = 18/1;
+            System.out.println("That the default output" + e);
+
         }
-        catch (Exception e)
+        catch(Exception e) //catch block only executed in case of an exception
         {
             System.out.println("Something went wrong" + e);
+        }
+
+        System.out.println(n);
+        System.out.println("Program executed");
+    }
+}
+*/
+//Custom Exception & Ducking Exception->(throws ClassNotFoundException).
+class NavinException extends Exception
+{
+    public NavinException(String string)
+    {
+        super(string);
+    }
+}
+public class Lesson7
+{
+    static void main(String[] args)
+    {
+        int m = 20;
+        int n = 0;
+
+        try
+        {
+            n = 18/m;
+            if (n==0)
+                throw new NavinException("I don't want to print zero");
+        }
+        catch(ArithmeticException e) //Handle the error
+        {
+            n = 18/1;
+            System.out.println("That the default output" + e);
+
+        }
+        catch(Exception e) //catch block only executed in case of an exception
+        {
+            System.out.println("Something went wrong " + e);
         }
 
         System.out.println(n);
