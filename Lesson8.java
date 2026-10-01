@@ -355,4 +355,6 @@ public class Lesson8
     }
 }
 
-//Thread States in java.
+//Thread States in java. New ->(run())-> Runnable ->(run())-> Running ->(sleep()/wait()) ->(stop())-> Dead
+//Runnable ->(stop())-> Dead
+//Waiting ->(notify()) -> Runnable
